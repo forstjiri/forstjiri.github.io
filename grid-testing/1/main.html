@@ -1,0 +1,46 @@
+<link href="../common.css" rel="stylesheet">
+
+<!-- defined areas with first column fixed on desktop -->
+<style type="text/css">
+    .dashboard {
+        min-height: 80vh;
+        grid-template-columns: 200px 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header     header  header"
+            "sidebar    main    main"
+            "ad         ad      footer";
+
+        .main { grid-area: main }
+        .header { grid-area: header }
+        .sidebar { grid-area: sidebar }
+        .footer { grid-area: footer }
+        .ad { grid-area: ad }
+    }
+
+    @media (max-width: 500px) {
+        .dashboard {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+              "header"
+              "main"
+              "sidebar"
+              "footer"
+              "ad";
+        }
+    }
+</style>
+
+
+<div class="grid dashboard">
+    <div class="header box">Header</div>
+    <div class="sidebar box">Sidebar</div>
+    <div class="main box">
+        <h1>Main content</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius error est excepturi mollitia necessitatibus nemo quia quisquam ullam velit voluptatibus? Enim eos excepturi, facilis necessitatibus rem tempora vitae voluptas voluptates!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius error est excepturi mollitia necessitatibus nemo quia quisquam ullam velit voluptatibus? Enim eos excepturi, facilis necessitatibus rem tempora vitae voluptas voluptates!</p>
+    </div>
+    <div class="box">Extra box without defined area</div>
+    <div class="footer box">Footer</div>
+    <div class="ad box">Ad</div>
+</div>

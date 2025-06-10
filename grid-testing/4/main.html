@@ -1,0 +1,56 @@
+
+    <link href="../common.css" rel="stylesheet">
+
+    <style>
+        .gallery {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .overlay {
+            display: grid;
+            place-items: center;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            font-size: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+            grid-column: 1 / -1;
+            grid-row: 1 / -1;
+        }
+
+        .content {
+            z-index: 1;
+            grid-column: 1 / -1;
+            grid-row: 1 / -1;
+        }
+
+        .item {
+            display: grid;
+            aspect-ratio: 1 / 1;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .item:hover .overlay {
+            opacity: 1;
+        }
+
+    </style>
+<div class="gallery grid">
+    <div class="item" style="background-image: url('https://picsum.photos/536/354')">
+        <div class="content"></div>
+        <div class="overlay">Zobrazit</div>
+    </div>
+    <div class="item" style="background-image: url('https://picsum.photos/536/355')">
+        <div class="content"></div>
+        <div class="overlay">Zobrazit</div>
+    </div>
+    <div class="item" style="background-image: url('https://picsum.photos/536/356')">
+        <div class="content"></div>
+        <div class="overlay">Zobrazit</div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+body {
+    font-family: sans-serif;
+    padding: 2rem;
+    background: #f4f4f4;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    background: #fafafa;
+}
+
+.box {
+    position: relative;
+    padding: 1rem;
+    background: rgba(244, 244, 244, 0.5);
+    display: grid;
+    place-items: center;
+    border: 4px dotted #cbc;
+    border-radius: 4px;
+}
